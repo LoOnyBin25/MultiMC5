@@ -391,7 +391,7 @@ SET(MULTIMC_SOURCES
 	logic/Mod.cpp
 	logic/ModList.h
 	logic/ModList.cpp
-	
+
 	# sets and maps for deciding based on versions
 	logic/VersionFilterData.h
 	logic/VersionFilterData.cpp
@@ -413,7 +413,7 @@ SET(MULTIMC_SOURCES
 	# Player skin utilities
 	logic/SkinUtils.h
 	logic/SkinUtils.cpp
-	
+
 	# misc model filter
 	logic/EnabledItemFilter.h
 	logic/EnabledItemFilter.cpp
@@ -603,7 +603,7 @@ SET(MULTIMC_SOURCES
 	logic/tools/JProfiler.cpp
 	logic/tools/JVisualVM.h
 	logic/tools/JVisualVM.cpp
-	
+
 	# Forge and all things forge related
 	logic/forge/ForgeVersion.h
 	logic/forge/ForgeVersion.cpp
@@ -618,7 +618,7 @@ SET(MULTIMC_SOURCES
 	logic/forge/LegacyForge.cpp
 	logic/forge/ForgeInstaller.h
 	logic/forge/ForgeInstaller.cpp
-	
+
 	# Liteloader and related things
 	logic/liteloader/LiteLoaderInstaller.h
 	logic/liteloader/LiteLoaderInstaller.cpp
@@ -635,6 +635,10 @@ SET(MULTIMC_SOURCES
 	logic/technic/LegacyPackInfo.h
 	logic/technic/PackModel.cpp
 	logic/technic/PackModel.h
+	logic/technic/SolderVersion.cpp
+	logic/technic/SolderVersion.h
+	logic/SolderInstance.cpp
+	logic/SolderInstance.h
 	gui/dialogs/TechnicDialog.cpp
 	gui/dialogs/TechnicDialog.h
 )
