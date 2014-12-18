@@ -242,20 +242,15 @@ bool OneSixInstance::prepareForLaunch(AuthSessionPtr session, QString &launchScr
 		{
 			launchScript += "cp " + librariesPath().absoluteFilePath(lib->storagePath()) + "\n";
 		}
-		QString minecraftjarpath;
 		if (version->hasJarMods())
 		{
-			for (auto jarmod : version->jarMods)
-			{
-				launchScript += "cp " + jarmodsPath().absoluteFilePath(jarmod->name) + "\n";
-			}
-			minecraftjarpath = version->id + "/" + version->id + "-stripped.jar";
+			launchScript += "cp " + QDir(instanceRoot()).absoluteFilePath("temp.jar") + "\n";
 		}
 		else
 		{
-			minecraftjarpath = version->id + "/" + version->id + ".jar";
+			QString relpath = version->id + "/" + version->id + ".jar";
+			launchScript += "cp " + versionsPath().absoluteFilePath(relpath) + "\n";
 		}
-		launchScript += "cp " + versionsPath().absoluteFilePath(minecraftjarpath) + "\n";
 	}
 	if (!version->mainClass.isEmpty())
 	{
